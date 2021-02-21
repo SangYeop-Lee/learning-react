@@ -1,0 +1,40 @@
+.CSSModule {
+	background: #000a;
+	display: flex;
+}
+.CSSModule * {
+	width: 64px;
+	height: 64px;
+}
+
+.red {
+	background: #fa5252;
+}
+
+.wider {
+	width: 128px;
+}
+
+:global .orange {
+	background: #fd7e14;
+}
+
+:global .yellow {
+	background: #fcc419;
+}
+
+:global .green {
+	background: #40c057;
+}
+
+:global .blue {
+	background: #339af0;
+}
+
+:global .indigo {
+	background: #5c7cfa;
+}
+
+:global .violet {
+	background: #7950f2;
+}
