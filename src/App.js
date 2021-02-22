@@ -1,74 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+import Profiles from './Profiles';
 
-import CSSModule from './SassExample/SassComponent'
-
-class App extends Component {
-	render() {
-		return(	
+const App = () => {
+	
+	return (
 		<div>
-			<CSSModule />
+			<ul>
+				<li>
+					<Link to="/">홈</Link>
+				</li>
+				<li>
+					<Link to="/about">소개</Link>
+				</li>
+				<li>
+					<Link to="/profiles">프로필</Link>
+				</li>
+			</ul>
+			<hr />
+			<Route path="/" component={Home} exact={true} />
+			<Route path={['/about', '/info']} component={About} />
+			<Route path="/profiles" component={Profiles} />
 		</div>
-		);
-	}
-}
-
-// import SassComponent from './SassExample/SassComponent'
-
-// class App extends Component {
-// 	render() {
-// 		return(	
-// 		<div>
-// 			<SassComponent />
-// 		</div>
-// 		);
-// 	}
-// }
-
-// import ScrollBox from './ScrollBox/ScrollBox'
-
-// class App extends Component {
-// 	render() {
-// 		return(	
-// 		<div>
-// 			<ScrollBox ref={ref=>this.scrollBox=ref}/>
-// 			<button onClick={() => this.scrollBox.scrollToBottom()}>
-// 				맨 밑으로
-// 			</button>
-// 		</div>
-// 		);
-// 	}
-// }
-
-// import ValidationSample from './validationSamples/ValidationSample'
-
-// class App extends Component {
-// 	render() {
-// 		return(
-// 			<ValidationSample />
-// 		);
-// 	}
-// }
-
-
-// import FuncComp from './classAndFuncComp/Func.js';
-// import ClassComp from './classAndFuncComp/Class.js';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <FuncComp 
-// 		  name="Sangyeop-lee"
-// 		  favoriteNumber={3}
-// 	  >
-// 		  sangyeop
-// 	  </FuncComp>
-// 	  <br />
-// 	  <br />
-// 	  <ClassComp 
-// 		  favoriteNumber={4}
-// 	  />
-//     </div>
-//   );
-// }
+	);
+};
 
 export default App;
