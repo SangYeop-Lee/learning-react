@@ -35,7 +35,7 @@ const App = () => {
 			setForm({ name:'', username:'' });
 			nextId.current += 1;
 		},
-		[data, form.name, form.username]
+		[form.name, form.username]
 	);
 	
 	const onRemove = useCallback(
